@@ -1,4 +1,4 @@
-# Charity & Donation Management Portal
+# GiveBit - Charity & Donation Management Portal
 
 A full-stack web application for managing charity donations and contributions between NGOs and donors.
 
