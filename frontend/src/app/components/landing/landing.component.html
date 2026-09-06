@@ -1,58 +1,279 @@
 <div class="landing-container">
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title">Welcome to Donation & Charity Management Portal</h1>
-      <p class="hero-subtitle">Connecting generous hearts with meaningful causes</p>
-      <div class="hero-buttons">
-        <button mat-raised-button color="primary" class="hero-button" routerLink="/login">
-          <mat-icon>login</mat-icon>
-          Login
-        </button>
-        <button mat-stroked-button color="accent" class="hero-button" routerLink="/register">
-          <mat-icon>person_add</mat-icon>
-          Register
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <mat-icon class="brand-icon">volunteer_activism</mat-icon>
+        <span class="brand-text">GiveBit</span>
+      </div>
+      <div class="navbar-menu">
+        <a class="nav-link" routerLink="/login">Login</a>
+        <button mat-raised-button color="primary" class="nav-cta" routerLink="/register">
+          Get Started
         </button>
       </div>
     </div>
-    <div class="hero-image">
-      <mat-icon class="hero-icon">volunteer_activism</mat-icon>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <mat-icon class="badge-icon">star</mat-icon>
+        <span>Trusted by 10,000+ donors worldwide</span>
+      </div>
+      <h1 class="hero-title">Make a Difference Today</h1>
+      <p class="hero-subtitle">GiveBit connects generous donors with verified NGOs, making charitable giving transparent, impactful, and rewarding. Join our community of changemakers.</p>
+      <div class="hero-buttons">
+        <button mat-raised-button color="primary" class="hero-button primary" routerLink="/register">
+          Start Donating
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+        <button mat-stroked-button class="hero-button secondary" routerLink="/donations">
+          <mat-icon>search</mat-icon>
+          Browse Causes
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="mini-stat">
+          <span class="mini-stat-number">$2.5M+</span>
+          <span class="mini-stat-label">Donated</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-stat-number">500+</span>
+          <span class="mini-stat-label">NGOs</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-stat-number">50+</span>
+          <span class="mini-stat-label">Countries</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-cards">
+        <div class="float-card card-1">
+          <mat-icon>favorite</mat-icon>
+          <span>Education</span>
+        </div>
+        <div class="float-card card-2">
+          <mat-icon>health_and_safety</mat-icon>
+          <span>Healthcare</span>
+        </div>
+        <div class="float-card card-3">
+          <mat-icon>restaurant</mat-icon>
+          <span>Food Security</span>
+        </div>
+        <div class="float-card card-4">
+          <mat-icon>home</mat-icon>
+          <span>Shelter</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Features Section -->
   <section class="features-section">
-    <h2 class="section-title">Platform Features</h2>
+    <div class="section-header">
+      <h2 class="section-title">Why Choose GiveBit?</h2>
+      <p class="section-subtitle">Experience the future of charitable giving with our innovative platform</p>
+    </div>
     <div class="features-grid">
       <mat-card class="feature-card">
-        <mat-card-header>
-          <mat-icon class="feature-icon">favorite</mat-icon>
-          <mat-card-title>For Donors</mat-card-title>
-        </mat-card-header>
+        <div class="feature-icon-wrapper">
+          <mat-icon class="feature-icon">verified_user</mat-icon>
+        </div>
+        <mat-card-title>Verified NGOs</mat-card-title>
         <mat-card-content>
-          <p>Browse donation opportunities, track your contributions, and see your impact on the community.</p>
+          <p>All NGOs undergo rigorous verification to ensure your donations reach legitimate causes.</p>
         </mat-card-content>
       </mat-card>
 
       <mat-card class="feature-card">
-        <mat-card-header>
-          <mat-icon class="feature-icon">business</mat-icon>
-          <mat-card-title>For NGO's</mat-card-title>
-        </mat-card-header>
+        <div class="feature-icon-wrapper">
+          <mat-icon class="feature-icon">visibility</mat-icon>
+        </div>
+        <mat-card-title>Full Transparency</mat-card-title>
         <mat-card-content>
-          <p>Create donation requests, manage campaigns, and connect with generous donors worldwide.</p>
+          <p>Track every donation in real-time with detailed impact reports and fund allocation updates.</p>
         </mat-card-content>
       </mat-card>
 
       <mat-card class="feature-card">
-        <mat-card-header>
-          <mat-icon class="feature-icon">admin_panel_settings</mat-icon>
-          <mat-card-title>For Admins</mat-card-title>
-        </mat-card-header>
+        <div class="feature-icon-wrapper">
+          <mat-icon class="feature-icon">payments</mat-icon>
+        </div>
+        <mat-card-title>Secure Payments</mat-card-title>
         <mat-card-content>
-          <p>Oversee platform operations, manage users, and ensure smooth functioning of the donation ecosystem.</p>
+          <p>Bank-grade encryption and multiple payment options for safe and convenient transactions.</p>
         </mat-card-content>
       </mat-card>
+
+      <mat-card class="feature-card">
+        <div class="feature-icon-wrapper">
+          <mat-icon class="feature-icon">emoji_events</mat-icon>
+        </div>
+        <mat-card-title>Gamification</mat-card-title>
+        <mat-card-content>
+          <p>Earn badges, climb leaderboards, and get recognized for your charitable contributions.</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="feature-card">
+        <div class="feature-icon-wrapper">
+          <mat-icon class="feature-icon">forum</mat-icon>
+        </div>
+        <mat-card-title>Direct Communication</mat-card-title>
+        <mat-card-content>
+          <p>Connect directly with NGOs to understand their needs and see your impact firsthand.</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="feature-card">
+        <div class="feature-icon-wrapper">
+          <mat-icon class="feature-icon">analytics</mat-icon>
+        </div>
+        <mat-card-title>Impact Analytics</mat-card-title>
+        <mat-card-content>
+          <p>Comprehensive dashboards showing your donation history, impact metrics, and tax receipts.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works-section">
+    <div class="section-header">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Start making a difference in three simple steps</p>
+    </div>
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Create Your Account</h3>
+          <p>Sign up as a donor or NGO in minutes. Our simple registration process gets you started quickly.</p>
+        </div>
+        <mat-icon class="step-icon">person_add</mat-icon>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Discover Causes</h3>
+          <p>Browse verified donation requests across categories like education, healthcare, food, and more.</p>
+        </div>
+        <mat-icon class="step-icon">search</mat-icon>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Make an Impact</h3>
+          <p>Donate securely, track your contribution, and watch the positive impact unfold in real-time.</p>
+        </div>
+        <mat-icon class="step-icon">volunteer_activism</mat-icon>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <h2 class="section-title">What Our Community Says</h2>
+      <p class="section-subtitle">Real stories from real changemakers</p>
+    </div>
+    <div class="testimonials-grid">
+      <mat-card class="testimonial-card">
+        <mat-card-content>
+          <div class="testimonial-rating">
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+          </div>
+          <p class="testimonial-text">"GiveBit has transformed how we approach charitable giving. The transparency and ease of use are unmatched. I've donated to over 20 causes and can see exactly where my money goes."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <h4>John Davidson</h4>
+              <p>Donor since 2024</p>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="testimonial-card">
+        <mat-card-content>
+          <div class="testimonial-rating">
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+          </div>
+          <p class="testimonial-text">"As an NGO, GiveBit helped us reach donors we never could have connected with otherwise. The platform's verification process gave donors confidence in our organization."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SM</div>
+            <div class="author-info">
+              <h4>Sarah Mitchell</h4>
+              <p>Director, Hope Foundation</p>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="testimonial-card">
+        <mat-card-content>
+          <div class="testimonial-rating">
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+            <mat-icon class="star">star</mat-icon>
+          </div>
+          <p class="testimonial-text">"The gamification features make donating fun! I love earning badges and climbing the leaderboard. It motivates me to give more regularly."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div class="author-info">
+              <h4>Raj Kumar</h4>
+              <p>Top Donor 2025</p>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners-section">
+    <div class="section-header">
+      <h2 class="section-title">Trusted By Leading Organizations</h2>
+      <p class="section-subtitle">Partnering with NGOs and corporations worldwide</p>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-logo">
+        <mat-icon class="partner-icon">business</mat-icon>
+        <span>Red Cross</span>
+      </div>
+      <div class="partner-logo">
+        <mat-icon class="partner-icon">business</mat-icon>
+        <span>UNICEF</span>
+      </div>
+      <div class="partner-logo">
+        <mat-icon class="partner-icon">business</mat-icon>
+        <span>WHO</span>
+      </div>
+      <div class="partner-logo">
+        <mat-icon class="partner-icon">business</mat-icon>
+        <span>Save Children</span>
+      </div>
+      <div class="partner-logo">
+        <mat-icon class="partner-icon">business</mat-icon>
+        <span>United Way</span>
+      </div>
+      <div class="partner-logo">
+        <mat-icon class="partner-icon">business</mat-icon>
+        <span>Habitat</span>
+      </div>
     </div>
   </section>
 
@@ -61,22 +282,22 @@
     <div class="stats-container">
       <div class="stat-item">
         <mat-icon class="stat-icon">groups</mat-icon>
-        <div class="stat-number">10,000+</div>
+        <div class="stat-number" data-count="10000">0</div>
         <div class="stat-label">Active Donors</div>
       </div>
       <div class="stat-item">
         <mat-icon class="stat-icon">account_balance</mat-icon>
-        <div class="stat-number">500+</div>
-        <div class="stat-label">Partner NGO's</div>
+        <div class="stat-number" data-count="500">0</div>
+        <div class="stat-label">Partner NGOs</div>
       </div>
       <div class="stat-item">
         <mat-icon class="stat-icon">payments</mat-icon>
-        <div class="stat-number">$2.5M+</div>
+        <div class="stat-number" data-count="2500000">$0</div>
         <div class="stat-label">Total Donations</div>
       </div>
       <div class="stat-item">
         <mat-icon class="stat-icon">emoji_events</mat-icon>
-        <div class="stat-number">50+</div>
+        <div class="stat-number" data-count="50">0</div>
         <div class="stat-label">Countries Reached</div>
       </div>
     </div>
@@ -85,12 +306,20 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="cta-content">
+      <div class="cta-badge">
+        <mat-icon>rocket_launch</mat-icon>
+        <span>Join 10,000+ changemakers today</span>
+      </div>
       <h2 class="cta-title">Ready to Make a Difference?</h2>
-      <p class="cta-subtitle">Join our community of changemakers and start making an impact today.</p>
+      <p class="cta-subtitle">Join our community of changemakers and start making an impact today. Your contribution, no matter how small, can change lives.</p>
       <div class="cta-buttons">
-        <button mat-raised-button color="primary" size="large" routerLink="/register">
-          Get Started Now
+        <button mat-raised-button color="primary" size="large" class="cta-button-primary" routerLink="/register">
+          Start Your Journey
           <mat-icon>arrow_forward</mat-icon>
+        </button>
+        <button mat-stroked-button size="large" class="cta-button-secondary" routerLink="/donations">
+          <mat-icon>visibility</mat-icon>
+          Explore Causes
         </button>
       </div>
     </div>
@@ -100,8 +329,25 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Donation & Charity Management Portal</h3>
-        <p>Empowering communities through charitable giving</p>
+        <div class="footer-brand">
+          <mat-icon class="footer-brand-icon">volunteer_activism</mat-icon>
+          <h3>GiveBit</h3>
+        </div>
+        <p>Empowering communities through transparent and impactful charitable giving. Together, we can make the world a better place.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <mat-icon>facebook</mat-icon>
+          </a>
+          <a href="#" class="social-link">
+            <mat-icon>alternate_email</mat-icon>
+          </a>
+          <a href="#" class="social-link">
+            <mat-icon>photo_camera</mat-icon>
+          </a>
+          <a href="#" class="social-link">
+            <mat-icon>chat</mat-icon>
+          </a>
+        </div>
       </div>
       <div class="footer-section">
         <h4>Quick Links</h4>
@@ -109,16 +355,45 @@
           <li><a routerLink="/login">Login</a></li>
           <li><a routerLink="/register">Register</a></li>
           <li><a routerLink="/donations">Browse Donations</a></li>
+          <li><a routerLink="/about">About Us</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h4>Contact</h4>
-        <p>support@charityportal.org</p>
-        <p>+91 9110395993 </p>
+        <h4>For Donors</h4>
+        <ul>
+          <li><a routerLink="/donations">Find Causes</a></li>
+          <li><a routerLink="/leaderboard">Leaderboard</a></li>
+          <li><a routerLink="/impact">Your Impact</a></li>
+          <li><a routerLink="/faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <div class="contact-info">
+          <div class="contact-item">
+            <mat-icon>email</mat-icon>
+            <span>support@givebit.org</span>
+          </div>
+          <div class="contact-item">
+            <mat-icon>phone</mat-icon>
+            <span>+91 9110395993</span>
+          </div>
+          <div class="contact-item">
+            <mat-icon>location_on</mat-icon>
+            <span>Hyderabad, India</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Donation & Charity Management Portal. All rights reserved.</p>
+      <div class="footer-bottom-content">
+        <p>&copy; 2026 GiveBit - Charity & Donation Management Portal. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
     </div>
   </footer>
 </div>

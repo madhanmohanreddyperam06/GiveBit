@@ -43,7 +43,19 @@ export class NgoDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = this.authService.getCurrentUser();
-    if (!this.currentUser || this.currentUser.role !== 'NGO') {
+    
+    // TEMPORARY: Provide mock user data when authentication is disabled
+    if (!this.currentUser) {
+      this.currentUser = {
+        id: 1,
+        name: 'Test NGO',
+        email: 'ngo@test.com',
+        role: 'NGO',
+        created_at: new Date().toISOString()
+      };
+    }
+    
+    if (this.currentUser.role !== 'NGO') {
       this.router.navigate(['/login']);
       return;
     }

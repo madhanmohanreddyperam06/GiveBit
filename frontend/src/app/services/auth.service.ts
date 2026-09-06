@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { Observable, BehaviorSubject, of } from 'rxjs';
+import { map, tap, delay } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { User, LoginRequest, RegisterRequest, AuthResponse } from '../models/user.model';
 
@@ -13,6 +13,31 @@ export class AuthService {
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
 
+  // Mock user database
+  private mockUsers: User[] = [
+    {
+      id: 1,
+      name: 'Test NGO',
+      email: 'ngo@test.com',
+      role: 'NGO',
+      created_at: new Date().toISOString()
+    },
+    {
+      id: 2,
+      name: 'Test Donor',
+      email: 'donor@test.com',
+      role: 'Donor',
+      created_at: new Date().toISOString()
+    },
+    {
+      id: 3,
+      name: 'Test Admin',
+      email: 'admin@test.com',
+      role: 'Admin',
+      created_at: new Date().toISOString()
+    }
+  ];
+
   constructor(private http: HttpClient) {
     const storedUser = localStorage.getItem('currentUser');
     if (storedUser) {
@@ -21,7 +46,29 @@ export class AuthService {
   }
 
   login(credentials: LoginRequest): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.apiUrl}/login`, credentials).pipe(
+    // Mock authentication - check against mock users
+    const mockUser = this.mockUsers.find(user => 
+      user.email === credentials.email
+    );
+
+    return of(mockUser).pipe(
+      delay(1000), // Simulate network delay
+      map(user => {
+        if (!user) {
+          throw new Error('Invalid credentials');
+        }
+        
+        // Generate mock token
+        const token = 'mock-jwt-token-' + Date.now();
+        
+        const response: AuthResponse = {
+          message: 'Login successful',
+          token: token,
+          user: user
+        };
+        
+        return response;
+      }),
       tap(response => {
         localStorage.setItem('token', response.token);
         localStorage.setItem('currentUser', JSON.stringify(response.user));
@@ -31,7 +78,41 @@ export class AuthService {
   }
 
   register(userData: RegisterRequest): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.apiUrl}/register`, userData).pipe(
+    // Mock registration - check if user already exists
+    const existingUser = this.mockUsers.find(user => 
+      user.email === userData.email
+    );
+
+    return of(existingUser).pipe(
+      delay(1000), // Simulate network delay
+      map(existing => {
+        if (existing) {
+          throw new Error('User already exists');
+        }
+        
+        // Create new user
+        const newUser: User = {
+          id: this.mockUsers.length + 1,
+          name: userData.name,
+          email: userData.email,
+          role: userData.role,
+          created_at: new Date().toISOString()
+        };
+        
+        // Add to mock database
+        this.mockUsers.push(newUser);
+        
+        // Generate mock token
+        const token = 'mock-jwt-token-' + Date.now();
+        
+        const response: AuthResponse = {
+          message: 'Registration successful',
+          token: token,
+          user: newUser
+        };
+        
+        return response;
+      }),
       tap(response => {
         localStorage.setItem('token', response.token);
         localStorage.setItem('currentUser', JSON.stringify(response.user));

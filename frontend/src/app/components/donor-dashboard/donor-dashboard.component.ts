@@ -32,7 +32,19 @@ export class DonorDashboardComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.currentUser = this.authService.getCurrentUser();
-    if (!this.currentUser || this.currentUser.role !== 'Donor') {
+    
+    // TEMPORARY: Provide mock user data when authentication is disabled
+    if (!this.currentUser) {
+      this.currentUser = {
+        id: 2,
+        name: 'Test Donor',
+        email: 'donor@test.com',
+        role: 'Donor',
+        created_at: new Date().toISOString()
+      };
+    }
+    
+    if (this.currentUser.role !== 'Donor') {
       this.router.navigate(['/login']);
       return;
     }

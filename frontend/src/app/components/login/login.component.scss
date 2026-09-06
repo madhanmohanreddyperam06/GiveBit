@@ -1,6 +1,7 @@
 .login-container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
+  overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-family: 'Roboto', sans-serif;
 }
@@ -109,16 +110,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
   background: #f8f9fa;
 }
 
 .login-card {
   width: 100%;
-  max-width: 380px;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  padding: 24px 24px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   background: white;
   border: none;
   transition: all 0.3s ease;
@@ -131,27 +132,27 @@
 
 .login-card mat-card-header {
   text-align: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
   border-bottom: 2px solid #f0f0f0;
 }
 
 .login-title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #2E7D32 !important;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .login-subtitle {
   color: #666 !important;
-  font-size: 1rem;
+  font-size: 0.9rem;
   opacity: 0.8;
 }
 
 /* Custom Form Fields */
 .custom-form-field {
-  margin-bottom: 25px;
+  margin-bottom: 8px;
 }
 
 .custom-form-field .mat-form-field-outline {
@@ -179,8 +180,8 @@
 }
 
 .custom-input {
-  font-size: 1rem;
-  padding: 12px 0;
+  font-size: 0.85rem;
+  padding: 4px 0;
 }
 
 .input-prefix {
@@ -189,7 +190,7 @@
 
 .input-prefix mat-icon {
   color: #2E7D32;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .password-toggle {
@@ -206,7 +207,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0 30px 0;
+  margin: 8px 0 12px 0;
 }
 
 .remember-me {
@@ -231,16 +232,16 @@
 
 /* Login Button */
 .login-button {
-  padding: 15px;
-  font-size: 1.1rem;
+  padding: 6px;
+  font-size: 0.85rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 8px;
   background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
   border: none;
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .login-button:hover:not(:disabled) {
@@ -275,8 +276,8 @@
 /* Login Actions */
 .login-actions {
   text-align: center;
-  margin-top: 30px;
-  padding-top: 20px;
+  margin-top: 12px;
+  padding-top: 8px;
   border-top: 1px solid #f0f0f0;
 }
 

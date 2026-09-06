@@ -29,7 +29,8 @@ const routes: Routes = [
   { path: 'admin/dashboard', component: AdminDashboardComponent, canActivate: [AuthGuard] },
   { path: 'leaderboard', component: LeaderboardComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '/' }
+  // TEMPORARY: Redirect to NGO dashboard when authentication is disabled
+  { path: '**', redirectTo: '/ngo/dashboard' }
 ];
 
 @NgModule({
