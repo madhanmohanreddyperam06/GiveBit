@@ -1,56 +1,57 @@
-# GiveBit - Charity & Donation Management Portal
+# GiveBit
 
 ![Angular](https://img.shields.io/badge/Angular-16-DD0031?style=flat-square&logo=angular&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=flat-square&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+
 
 A comprehensive full-stack web application designed to streamline charity donations and facilitate seamless contributions between NGOs and donors. The platform provides an intuitive interface for managing donation requests, tracking contributions, and fostering community engagement through real-time updates and gamification features.
 
-## 🚀 Key Features
+## Key Features
 
-### 🔐 **User Authentication & Authorization**
+### **User Authentication & Authorization**
 
 - Role-based access control (NGO/Donor)
 - Secure JWT authentication
 - Password encryption with bcryptjs
 
-### 💝 **Donation Management**
+### **Donation Management**
 
 - NGOs can create, edit, and manage donation requests
 - Categorization by donation type (monetary, goods, services)
 - Priority-based donation sorting
 - Location-based donation discovery
 
-### 💰 **Contribution System**
+### **Contribution System**
 
 - Donors can browse and filter available donations
 - Secure contribution processing
 - Real-time contribution tracking
 - Contribution history and analytics
 
-### 📊 **Dashboard & Analytics**
+### **Dashboard & Analytics**
 
 - Personalized dashboards for NGOs and Donors
 - Real-time statistics and insights
 - Visual charts and progress indicators
 
-### 🏆 **Gamification & Community**
+### **Gamification & Community**
 
 - Leaderboard showcasing top contributors
 - Achievement badges and recognition system
 - Social sharing capabilities
 
-### ⚡ **Real-time Features**
+### **Real-time Features**
 
 - Live status updates for donations
 - Instant notifications for contributions
 - Real-time chat support system
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-### 🎨 Frontend Technologies
+### Frontend Technologies
 
 ![Angular](https://img.shields.io/badge/Angular-16-DD0031?style=flat-square&logo=angular&logoColor=white)
 ![Angular Material](https://img.shields.io/badge/Angular_Material-7B1FA2?style=flat-square&logo=angular&logoColor=white)
@@ -62,7 +63,7 @@ A comprehensive full-stack web application designed to streamline charity donati
 - **TypeScript** - Type-safe JavaScript for better code quality
 - **RxJS** - Reactive programming for handling asynchronous operations
 
-### ⚙️ Backend Technologies
+### Backend Technologies
 
 ![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
@@ -76,7 +77,7 @@ A comprehensive full-stack web application designed to streamline charity donati
 - **JWT Authentication** - Secure token-based authentication
 - **bcryptjs** - Password hashing for security
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -282,23 +283,21 @@ This project is licensed under the ISC License.
 
 For any issues or questions, please contact the development team.
 
-## 📞 Contact
+## Contact
 
 ### Project Lead
 
 #### Madhan Mohan Reddy
 
-- 📧 Email: [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com)
-- 📱 Mobile: +91 9110395993
+- Email: [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com)
+- Mobile: +91 9110395993
 
 ### Team Members
 
 - **Narukula Chiru Venkata Mohan**
-  - 📧 Email: [chiruvenkat09@gmail.com](mailto:chiruvenkat09@gmail.com)
-- **Ande Shireesha**
-  - 📧 Email: [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com)
+  - Email: [chiruvenkat09@gmail.com](mailto:chiruvenkat09@gmail.com)
 - **Nikhilashree**
-  - 📧 Email: [nikilashree.m@gmail.com](mailto:nikilashree.m@gmail.com)
+  - Email: [nikilashree.m@gmail.com](mailto:nikilashree.m@gmail.com)
 
 ### Get Support
 
